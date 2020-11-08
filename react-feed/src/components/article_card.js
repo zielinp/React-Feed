@@ -1,14 +1,28 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 const CardContainer = styled.div`
   width: 40rem;
+  /* height: 35rem; */
   display: flex;
   flex-direction: column;
   background-color: var(--elements);
   box-shadow: 10px 10px 37px -3px var(--boxShadowColor);
+  animation: ${fadeIn} 0.6s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    forwards;
+
   margin: 1rem;
   border-radius: 0.5rem;
+  opacity: 0;
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   a {
     text-decoration: none;
