@@ -62,7 +62,6 @@ const Title = styled.h2`
 
 const Date = styled.p`
   text-align: right;
-  /* color: #9e1c1c; */
 `;
 
 const Excerpt = styled.p``;

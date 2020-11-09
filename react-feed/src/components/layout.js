@@ -17,6 +17,7 @@ body{
     --textInput: hsl(0, 0%, 100%);
     --desktopFontSize: 16px;
     --mobileFontSize: 10px;
+    --redColorOKO: #9e1c1c; 
     background-color: var(--bg);
 }
 
@@ -34,7 +35,9 @@ h2{
     font-size: calc(var(--desktopFontSize) * 1.25) ;
   }
 }
-
+button{
+  font-size:var(--desktopFontSize);
+}
 * {
     box-sizing: border-box;
     :focus {
