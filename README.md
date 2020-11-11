@@ -1,6 +1,6 @@
 # React-Feed
 
-> Aplikackcja, która pokazuje przy przewijaniu pokazuje na stronie kolejne posty pobierane z zasobów API
+> Aplikacja, która przy przewijaniu pokazuje na stronie kolejne posty pobierane z zasobów API.
 
 ## Instalacja potrzebnych pakietów
 
