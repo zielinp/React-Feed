@@ -30,8 +30,9 @@ function ArticleList() {
   useEffect(() => {
     const height =
       document.documentElement.scrollHeight - //wysokosc widocznej czesc strony w trakcie scrollowania
-      document.documentElement.clientHeight; // calkowita wysokosc strony
-    if (y === height && !loading) {
+      document.documentElement.clientHeight -
+      1; // calkowita wysokosc strony
+    if (y > height && !loading) {
       setPageNumber(pageNumber + 1);
       console.log("koniec strony");
     }

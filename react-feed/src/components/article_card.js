@@ -1,5 +1,8 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const fadeIn = keyframes`
   from {
@@ -12,7 +15,10 @@ const fadeIn = keyframes`
 
 const CardContainer = styled.div`
   width: 40rem;
-  /* height: 35rem; */
+  height: 35rem;
+  @media only screen and (max-width: 1340px) {
+    height: unset;
+  }
   display: flex;
   flex-direction: column;
   background-color: var(--elements);
@@ -34,17 +40,24 @@ const CardContainer = styled.div`
   }
 `;
 
-const ImageContainer = styled.div.attrs((props) => ({
-  thumbUrl: props.thumbUrl,
-}))`
-  background-image: url(${(props) => props.thumbUrl});
-  height: 20rem;
+const ImageContainer = styled.div`
+  height: 20 rem;
   width: 100%;
   display: flex;
   flex-shrink: 3;
-  background-position: center center;
-  background-size: cover;
   border-radius: 0.5rem 0.5rem 0 0;
+
+  span {
+    width: 100%;
+  }
+
+  img {
+    height: 20rem;
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+    object-position: center center;
+    object-fit: cover;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -70,8 +83,11 @@ function ArticleCard({ articleUrl, title, excerpt, thumbUrl, date }) {
   return (
     <>
       <CardContainer>
-        <a target="blank" href={articleUrl}>
-          <ImageContainer thumbUrl={thumbUrl} />
+        <a target="blank" href={articleUrl} tr>
+          <ImageContainer>
+            <LazyLoadImage effect="blur" src={thumbUrl} />
+          </ImageContainer>
+
           <TextContainer>
             <Title>{title}</Title>
             <Excerpt>{excerpt}</Excerpt>

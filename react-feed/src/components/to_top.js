@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLongArrowAltUp } from "@fortawesome/free-solid-svg-icons";
+
 const StyledButton = styled.button`
   background-color: var(--elements);
   padding: 0.75rem 1rem;
@@ -26,7 +29,15 @@ function ToTop() {
   }
   return (
     <>
-      <StyledButton onClick={scrollToTop}>Back to top</StyledButton>
+      <StyledButton onClick={scrollToTop}>
+        {" "}
+        <FontAwesomeIcon
+          icon={faLongArrowAltUp}
+          color="var(--redColorOKO)"
+          size="1x"
+        />
+        <span> To top</span>
+      </StyledButton>
     </>
   );
 }

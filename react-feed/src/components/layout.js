@@ -21,7 +21,7 @@ body{
     background-color: var(--bg);
 }
 
-h1,h2,h3,h4,h5,h6,p,span {
+h1,h2,h3,h4,h5,h6,p,span,a {
     color: var(--textNormal);
     line-height: 1.25;
     }
@@ -35,8 +35,10 @@ h2{
     font-size: calc(var(--desktopFontSize) * 1.25) ;
   }
 }
-button{
+button, a{
   font-size:var(--desktopFontSize);
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--textTitle);
 }
 * {
     box-sizing: border-box;
