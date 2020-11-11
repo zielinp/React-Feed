@@ -1,13 +1,21 @@
 # React-Feed
 
-> Aplikacja, która przy przewijaniu pokazuje na stronie kolejne posty pobierane z zasobów API.
+> Aplikacja, która przy scrollowaniu w dół pokazuje na stronie kolejne posty pobierane z zasobów API.
 
 ## Instalacja potrzebnych pakietów
 
 W terminalu należy przejść do ścieżki ../React-Feed/react-feed
 
+1. Instalacja niezbędnych pakietów
+
 ```bash
 yarn install
+```
+
+2. Instalcja JSON server
+
+```bash
+npm install -g json-server
 ```
 
 ## Uruchomienie
